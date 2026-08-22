@@ -40,7 +40,7 @@
     if (config.trigger === 'hover') container.classList.add('stroke-text--hover');
     container.setAttribute('role', 'img');
     container.setAttribute('aria-label', String(config.text || ''));
-    container.style.setProperty('--stroke-text-height', Math.round(config.fontSize * config.lineHeightRatio) + 'px');
+    container.style.setProperty('--stroke-text-ratio', '600 / ' + (config.fontSize * config.lineHeightRatio));
     container.innerHTML = '';
 
     var svg = document.createElementNS(SVG_NS, 'svg');
@@ -122,10 +122,8 @@
       var box = { x: bbox.x - pad, y: bbox.y - pad, width: bbox.width + pad * 2, height: bbox.height + pad * 2 };
       svg.setAttribute('viewBox', box.x + ' ' + box.y + ' ' + box.width + ' ' + box.height);
 
-      var renderedWidth = container.clientWidth;
-      if (renderedWidth && box.width) {
-        var fitHeight = box.height * (renderedWidth / box.width);
-        container.style.setProperty('--stroke-text-height', Math.round(fitHeight) + 'px');
+      if (box.width && box.height) {
+        container.style.setProperty('--stroke-text-ratio', box.width + ' / ' + box.height);
       }
       if (wipeRect) {
         wipeRect.setAttribute('x', box.x);

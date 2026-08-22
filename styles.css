@@ -545,9 +545,9 @@ main{padding-top:var(--header-h)}
 /* ============ STROKE TEXT (título del hero de Inicio) ============ */
 .stroke-text{display:block;width:100%;line-height:0}
 .stroke-text--hover{cursor:pointer}
-.stroke-text__svg{display:block;width:100%;height:var(--stroke-text-height,160px);overflow:visible}
+.stroke-text__svg{display:block;width:100%;height:auto;aspect-ratio:var(--stroke-text-ratio, 6.5 / 1);overflow:visible}
 .stroke-text__stroke,.stroke-text__fill{user-select:none}
-.hero-title-stroke{display:flex;flex-direction:column}
+.hero-title-stroke{display:flex;flex-direction:column;width:100%;align-self:stretch}
 .hero-title-stroke .stroke-text{margin-top:-8px}
 .hero-title-stroke .stroke-text:first-child{margin-top:0}
 @media (max-width:640px){
