@@ -345,7 +345,7 @@ main{padding-top:var(--header-h)}
 
 /* ============ NAV DROPDOWN (Portafolio) ============ */
 .nav-dropdown{position:relative}
-.nav-dropdown-trigger{background:none;border:none;cursor:pointer;padding:4px 0;font-family:var(--font-mono);font-size:var(--fs-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-3);border-bottom:1px solid transparent;transition:color var(--dur-1) var(--ease-out)}
+.nav-dropdown-trigger{display:block;background:none;border:none;cursor:pointer;padding:4px 0;font-family:var(--font-mono);font-size:var(--fs-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-3);border-bottom:1px solid transparent;transition:color var(--dur-1) var(--ease-out)}
 .nav-dropdown.open .nav-dropdown-trigger,.nav-dropdown:hover .nav-dropdown-trigger,.nav-dropdown-trigger:focus{color:var(--text-1)}
 .nav-dropdown-panel{position:absolute;top:calc(100% + 14px);left:0;min-width:190px;background:var(--surface-card);border:1px solid var(--border-1);border-radius:var(--radius-2);box-shadow:var(--shadow-2);padding:var(--space-3);display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity var(--dur-1) var(--ease-out),transform var(--dur-1) var(--ease-out),visibility var(--dur-1)}
 .nav-dropdown.open .nav-dropdown-panel,.nav-dropdown:hover .nav-dropdown-panel{opacity:1;visibility:visible;transform:translateY(0)}
