@@ -351,7 +351,9 @@ main{padding-top:var(--header-h)}
 
 @media (max-width:900px){
   .site-nav,.site-header .phone{display:none}
-  .site-header .wrap{gap:var(--space-5)}
+  .site-header .wrap{grid-template-columns:auto 1fr;gap:var(--space-5)}
+  .site-header .brand{grid-column:1;justify-self:start}
+  .site-header-right{grid-column:2}
   .site-header .btn.sm{display:none}
 }
 
