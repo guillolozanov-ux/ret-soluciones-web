@@ -352,6 +352,7 @@ main{padding-top:var(--header-h)}
 @media (max-width:900px){
   .site-nav,.site-header .phone{display:none}
   .site-header .wrap{gap:var(--space-5)}
+  .site-header .brand{margin-right:var(--space-8)}
   .site-header .btn.sm{display:none}
 }
 
