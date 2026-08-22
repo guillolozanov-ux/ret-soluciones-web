@@ -521,7 +521,7 @@ main{padding-top:var(--header-h)}
 .hero-title-stroke .stroke-text{margin-top:-8px}
 .hero-title-stroke .stroke-text:first-child{margin-top:0}
 @media (max-width:640px){
-  .hero-title-stroke .stroke-text{margin-top:-14px;padding:0 var(--space-4)}
+  .hero-title-stroke .stroke-text{margin-top:-24px;padding:0 var(--space-4)}
 }
 
 /* ============ MAGIC BENTO (glow interactivo — sección IaaS) ============ */
