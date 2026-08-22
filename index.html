@@ -70,7 +70,7 @@
     </div>
   </div>
 
-  <section class="ret-light stat-band-teal" style="border-bottom:1px solid var(--border-1);background:var(--teal-500)">
+  <section class="ret-light stat-band-teal" id="stat-band-home" style="border-bottom:1px solid var(--border-1);background:var(--teal-600)">
     <div class="wrap grid-4" style="padding:var(--space-9) var(--gutter-lg)">
       <div class="stat"><div class="stat-value">+200</div><div class="stat-label">Empresas protegidas</div><div class="stat-note">Corte junio 2026</div></div>
       <div class="stat"><div class="stat-value">+15.000</div><div class="stat-label">Licencias gestionadas</div></div>
@@ -281,6 +281,11 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="assets/js/fold-text.js"></script>
 <script src="assets/js/stroke-text.js"></script>
+<script src="assets/js/counter-stats.js"></script>
+<script>
+  var __statBandHome = document.getElementById('stat-band-home');
+  if (__statBandHome) mountCounterStats(__statBandHome);
+</script>
 <script src="assets/js/magic-bento.js"></script>
 <script src="assets/js/specular-button.js"></script>
 <script src="assets/js/dot-wave.js"></script>

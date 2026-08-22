@@ -97,7 +97,7 @@
     </div>
   </section>
 
-  <section class="ret-light stat-band-teal" style="background:var(--teal-500);border-top:1px solid var(--border-1);border-bottom:1px solid var(--border-1)">
+  <section class="ret-light stat-band-teal" id="stat-band-conocenos" style="background:var(--teal-600);border-top:1px solid var(--border-1);border-bottom:1px solid var(--border-1)">
     <div class="wrap grid-3" style="padding:var(--space-10) var(--gutter-lg)">
       <div class="stat"><div class="stat-value">+20</div><div class="stat-label">Años operando</div></div>
       <div class="stat"><div class="stat-value">+15.000</div><div class="stat-label">Licencias gestionadas</div></div>
@@ -200,6 +200,11 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="assets/js/fold-text.js"></script>
 <script src="assets/js/specular-button.js"></script>
+<script src="assets/js/counter-stats.js"></script>
+<script>
+  var __statBandConocenos = document.getElementById('stat-band-conocenos');
+  if (__statBandConocenos) mountCounterStats(__statBandConocenos);
+</script>
 <script src="assets/js/dot-wave.js"></script>
 <script src="assets/js/nimbus-orb.js"></script>
 <script>
