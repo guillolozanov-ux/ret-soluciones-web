@@ -429,6 +429,11 @@ main{padding-top:var(--header-h)}
 .logo-loop-track img.logo-sophos{height:24px}
 .logo-loop-track img.logo-acronis{height:37px}
 .logo-loop-track img.logo-microsoft{height:22px}
+.logo-loop-track img.logo-stellarcyber{height:26px}
+.logo-loop-track img.logo-safetica{height:24px}
+.logo-loop-track img.logo-trendmicro{height:24px}
+.logo-loop-track img.logo-lumu{height:24px}
+.logo-loop-track img.logo-google{height:24px}
 @keyframes logo-loop-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--seq-width, 0px)))}}
 @media (prefers-reduced-motion:reduce){.logo-loop-track{animation:none!important}}
 .footer-bottom{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:var(--fs-2xs);color:var(--text-muted);flex-wrap:wrap;gap:var(--space-3)}
