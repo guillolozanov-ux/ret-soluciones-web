@@ -45,10 +45,9 @@
 
 <main>
 
-  <div class="image-panel" style="min-height:420px;border-bottom:1px solid var(--border-1)">
-    <div class="image-panel-bg" style="background-image:url('assets/bg-holo-datacenter.png')"></div>
-    <div class="image-panel-veil veil-flat"></div>
-    <div class="image-panel-content">
+  <div class="ret-wave" id="conocenos-hero-wave" style="min-height:420px;border-bottom:1px solid var(--border-1)">
+    <canvas class="ret-wave__canvas"></canvas>
+    <div class="ret-wave__content">
       <div class="wrap" style="padding-top:var(--space-11);padding-bottom:var(--space-10)">
         <div class="eyebrow"><span class="idx">—</span><span>Conócenos</span></div>
         <h1 class="h-display xl" style="margin:var(--space-6) 0 0;max-width:640px">¿Quiénes somos?</h1>
@@ -98,7 +97,7 @@
     </div>
   </section>
 
-  <section style="background:var(--surface-1);border-top:1px solid var(--border-1);border-bottom:1px solid var(--border-1)">
+  <section class="ret-light" style="background:var(--teal-500);border-top:1px solid var(--border-1);border-bottom:1px solid var(--border-1)">
     <div class="wrap grid-3" style="padding:var(--space-10) var(--gutter-lg)">
       <div class="stat"><div class="stat-value">+20</div><div class="stat-label">Años operando</div></div>
       <div class="stat"><div class="stat-value">+15.000</div><div class="stat-label">Licencias gestionadas</div></div>
@@ -130,10 +129,9 @@
     </div>
   </section>
 
-  <div class="image-panel" style="border-top:1px solid var(--border-1)">
-    <div class="image-panel-bg" style="background-image:url('assets/bg-nimbus-orbe.png')"></div>
-    <div class="image-panel-veil veil-flat"></div>
-    <div class="image-panel-content">
+  <div class="ret-orb" id="conocenos-cta-orb" style="min-height:clamp(420px,64vh,680px);border-top:1px solid var(--border-1)">
+    <canvas class="ret-orb__canvas"></canvas>
+    <div class="ret-orb__content">
       <div class="wrap section" style="text-align:center">
         <h2 class="h-display xl" style="margin:0 auto;max-width:640px">Cuéntenos sus requerimientos</h2>
         <p style="margin:var(--space-6) auto 0;max-width:480px;font-size:var(--fs-md);line-height:var(--lh-body);color:var(--text-2)">
@@ -202,6 +200,14 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="assets/js/fold-text.js"></script>
 <script src="assets/js/specular-button.js"></script>
+<script src="assets/js/dot-wave.js"></script>
+<script src="assets/js/nimbus-orb.js"></script>
+<script>
+  var __conocenosWave = document.getElementById('conocenos-hero-wave');
+  if (__conocenosWave) mountDotWave(__conocenosWave, { DENSITY: 0.4, DOT_SCALE: 0.22, INTENSITY: 0.16 });
+  var __conocenosOrb = document.getElementById('conocenos-cta-orb');
+  if (__conocenosOrb) mountNimbusOrb(__conocenosOrb);
+</script>
 <script src="assets/js/staggered-menu.js"></script>
 <script>
   (function () {

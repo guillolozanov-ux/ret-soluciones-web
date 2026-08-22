@@ -44,23 +44,28 @@
 </header>
 
 <main>
-  <section class="wrap" style="padding-top:var(--space-13);padding-bottom:var(--space-13)">
-    <div class="eyebrow"><span class="idx">—</span><span>Portafolio</span></div>
-    <h1 class="h-display xl" style="margin:var(--space-6) 0 var(--space-8);max-width:640px">DLP</h1>
-    <p style="margin:0 0 var(--space-8);max-width:560px;font-size:var(--fs-md);line-height:var(--lh-body);color:var(--text-2)">
-      Clasificación y control de la información que sale de la empresa: correo, USB, nube.
-    </p>
-    <div class="alert alert-info" style="max-width:560px">
-      <svg data-lucide="info" class="icon-16"></svg>
-      <div>
-        <div class="alert-title">Contenido en preparación</div>
-        <div class="alert-body">Escríbanos para conversar sobre este servicio mientras completamos esta ficha.</div>
+  <div class="ret-wave" id="dlp-hero-wave" style="min-height:60vh;border-bottom:1px solid var(--border-1)">
+    <canvas class="ret-wave__canvas"></canvas>
+    <div class="ret-wave__content">
+      <div class="wrap" style="padding-top:var(--space-13);padding-bottom:var(--space-13)">
+        <div class="eyebrow"><span class="idx">—</span><span>Portafolio</span></div>
+        <h1 class="h-display xl" style="margin:var(--space-6) 0 var(--space-8);max-width:640px">DLP</h1>
+        <p style="margin:0 0 var(--space-8);max-width:560px;font-size:var(--fs-md);line-height:var(--lh-body);color:var(--text-2)">
+          Clasificación y control de la información que sale de la empresa: correo, USB, nube.
+        </p>
+        <div class="alert alert-info" style="max-width:560px">
+          <svg data-lucide="info" class="icon-16"></svg>
+          <div>
+            <div class="alert-title">Contenido en preparación</div>
+            <div class="alert-body">Escríbanos para conversar sobre este servicio mientras completamos esta ficha.</div>
+          </div>
+        </div>
+        <div style="margin-top:var(--space-8)">
+          <a href="contacto.html" class="btn btn-primary lg">Solicitar diagnóstico</a>
+        </div>
       </div>
     </div>
-    <div style="margin-top:var(--space-8)">
-      <a href="contacto.html" class="btn btn-primary lg">Solicitar diagnóstico</a>
-    </div>
-  </section>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -117,6 +122,11 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="assets/js/fold-text.js"></script>
 <script src="assets/js/specular-button.js"></script>
+<script src="assets/js/dot-wave.js"></script>
+<script>
+  var __dlpWave = document.getElementById('dlp-hero-wave');
+  if (__dlpWave) mountDotWave(__dlpWave, { DENSITY: 0.4, DOT_SCALE: 0.22, INTENSITY: 0.16 });
+</script>
 <script src="assets/js/staggered-menu.js"></script>
 <script>
   (function () {

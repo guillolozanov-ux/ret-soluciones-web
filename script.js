@@ -115,10 +115,12 @@
   // Logo loop: clona el set base las veces que hagan falta para cubrir el
   // ancho de pantalla (con solo 2 copias fijas, en pantallas anchas el set
   // es más angosto que el viewport y se ve el corte antes de repetir).
-  var logoLoop = document.getElementById('logo-loop');
-  var logoTrack = document.getElementById('logo-loop-track');
-  var baseSeq = logoTrack ? logoTrack.querySelector('.logo-loop-seq') : null;
-  if (logoLoop && logoTrack && baseSeq) {
+  // Soporta varias instancias por página (buscadas por clase, no por id).
+  document.querySelectorAll('.logo-loop').forEach(function (logoLoop) {
+    var logoTrack = logoLoop.querySelector('.logo-loop-track');
+    var baseSeq = logoTrack ? logoTrack.querySelector('.logo-loop-seq') : null;
+    if (!logoTrack || !baseSeq) return;
+
     var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var buildTimer = null;
 
@@ -165,7 +167,7 @@
       });
     }
     window.addEventListener('resize', scheduleBuild);
-  }
+  });
 
   // Specular button: halo que recorre el borde y sigue el cursor, en todos
   // los botones principales (btn-primary) de la página.

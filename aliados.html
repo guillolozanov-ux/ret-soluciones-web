@@ -44,27 +44,53 @@
 </header>
 
 <main>
-  <section class="wrap" style="padding-top:var(--space-13);padding-bottom:var(--space-10)">
-    <div class="eyebrow"><span class="idx">—</span><span>Aliados</span></div>
-    <h1 class="h-display xl" style="margin:var(--space-6) 0 var(--space-8);max-width:640px">Nuestros aliados</h1>
-    <p style="margin:0 0 var(--space-8);max-width:560px;font-size:var(--fs-md);line-height:var(--lh-body);color:var(--text-2)">
-      Colaboramos con los principales desarrolladores y fabricantes del sector gracias a nuestras alianzas estratégicas. Marcas escritas en tipografía RET: no reconstruimos logotipos de fabricante sin autorización.
-    </p>
-    <div class="footer-fabricantes" style="gap:10px 16px">
-      <span class="badge badge-info">ESET — Gold Partner</span>
-      <span class="badge">Stellar Cyber</span>
-      <span class="badge">Safetica</span>
-      <span class="badge">Sophos</span>
-      <span class="badge">Acronis</span>
-      <span class="badge">Trend Micro</span>
-      <span class="badge">Luma</span>
-      <span class="badge">Fortinet</span>
-      <span class="badge">Microsoft</span>
-      <span class="badge">Google</span>
+
+  <div class="ret-wave" id="aliados-hero-wave" style="min-height:380px;border-bottom:1px solid var(--border-1)">
+    <canvas class="ret-wave__canvas"></canvas>
+    <div class="ret-wave__content">
+      <div class="wrap" style="padding-top:var(--space-13);padding-bottom:var(--space-10)">
+        <div class="eyebrow"><span class="idx">—</span><span>Aliados</span></div>
+        <h1 class="h-display xl" style="margin:var(--space-6) 0 var(--space-8);max-width:640px">Nuestros aliados</h1>
+        <p style="margin:0;max-width:560px;font-size:var(--fs-md);line-height:var(--lh-body);color:var(--text-2)">
+          Colaboramos con los principales desarrolladores y fabricantes del sector gracias a nuestras alianzas estratégicas. Marcas escritas en tipografía RET: no reconstruimos logotipos de fabricante sin autorización.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <section class="ret-light" style="background:var(--surface-1);border-bottom:1px solid var(--border-1);padding:var(--space-13) 0">
+    <div class="wrap">
+      <div class="divider-label"><span>Alianzas tecnológicas</span><span></span></div>
+    </div>
+    <div class="logo-loop" id="aliados-logo-loop" role="region" aria-label="Fabricantes aliados">
+      <div class="logo-loop-track" id="aliados-logo-loop-track">
+        <div class="logo-loop-seq">
+          <img src="assets/logos/eset.svg" alt="ESET — Gold Partner" class="logo-color logo-eset">
+          <img src="assets/logos/fortinet.svg" alt="Fortinet" class="logo-fortinet">
+          <img src="assets/logos/sophos.svg" alt="Sophos" class="logo-sophos">
+          <img src="assets/logos/acronis.svg" alt="Acronis" class="logo-acronis">
+          <img src="assets/logos/microsoft.svg" alt="Microsoft" class="logo-microsoft">
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <p style="margin:var(--space-7) 0 0;font-family:var(--font-mono);font-size:var(--fs-sm);color:var(--text-muted)">
+        Logotipos oficiales de cada fabricante, uso nominativo para indicar la alianza tecnológica.
+      </p>
+      <div class="footer-fabricantes" style="margin-top:var(--space-8);gap:10px 16px">
+        <span class="badge">Stellar Cyber</span>
+        <span class="badge">Safetica</span>
+        <span class="badge">Trend Micro</span>
+        <span class="badge">Luma</span>
+        <span class="badge">Google</span>
+      </div>
+      <p style="margin:var(--space-5) 0 0;font-size:var(--fs-sm);color:var(--text-3)">
+        Marcas escritas en tipografía RET: sin logotipo de fabricante disponible aún.
+      </p>
     </div>
   </section>
 
-  <section class="wrap" style="padding-bottom:var(--space-13)">
+  <section class="wrap" style="padding:var(--space-13) 0">
     <div class="alert alert-info" style="max-width:560px">
       <svg data-lucide="info" class="icon-16"></svg>
       <div>
@@ -132,6 +158,11 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="assets/js/fold-text.js"></script>
 <script src="assets/js/specular-button.js"></script>
+<script src="assets/js/dot-wave.js"></script>
+<script>
+  var __aliadosWave = document.getElementById('aliados-hero-wave');
+  if (__aliadosWave) mountDotWave(__aliadosWave, { DENSITY: 0.4, DOT_SCALE: 0.22, INTENSITY: 0.16 });
+</script>
 <script src="assets/js/staggered-menu.js"></script>
 <script>
   (function () {

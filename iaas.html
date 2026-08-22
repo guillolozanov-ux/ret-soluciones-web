@@ -61,7 +61,8 @@
     </div>
   </div>
 
-  <section class="wrap section">
+  <section class="ret-light" style="background:var(--surface-page)">
+    <div class="wrap section">
     <div class="eyebrow"><span class="idx">01.</span><span>¿Cómo funciona?</span></div>
     <h2 class="h-display" style="margin:var(--space-5) 0 var(--space-9);max-width:620px">Seis pasos, del agente a la recuperación</h2>
 
@@ -126,12 +127,12 @@
       </div>
 
     </div>
+    </div>
   </section>
 
-  <div class="image-panel" style="border-top:1px solid var(--border-1)">
-    <div class="image-panel-bg" style="background-image:url('assets/bg-nimbus-orbe.png')"></div>
-    <div class="image-panel-veil veil-flat"></div>
-    <div class="image-panel-content">
+  <div class="ret-orb" id="iaas-cta-orb" style="min-height:clamp(420px,64vh,680px);border-top:1px solid var(--border-1)">
+    <canvas class="ret-orb__canvas"></canvas>
+    <div class="ret-orb__content">
       <div class="wrap section" style="text-align:center">
         <h2 class="h-display xl" style="margin:0 auto;max-width:640px">Verifique su plan de recuperación</h2>
         <p style="margin:var(--space-6) auto 0;max-width:480px;font-size:var(--fs-md);line-height:var(--lh-body);color:var(--text-2)">
@@ -201,9 +202,24 @@
 <script src="assets/js/fold-text.js"></script>
 <script src="assets/js/specular-button.js"></script>
 <script src="assets/js/dot-wave.js"></script>
+<script src="assets/js/nimbus-orb.js"></script>
+<script src="assets/js/magic-bento.js"></script>
 <script>
   var __iaasWave = document.getElementById('iaas-hero-wave');
   if (__iaasWave) mountDotWave(__iaasWave, { DENSITY: 0.4, DOT_SCALE: 0.22, INTENSITY: 0.16 });
+  var __iaasOrb = document.getElementById('iaas-cta-orb');
+  if (__iaasOrb) mountNimbusOrb(__iaasOrb);
+  var __stepsList = document.querySelector('.steps-list');
+  if (__stepsList) {
+    initMagicBento(__stepsList, Array.prototype.slice.call(__stepsList.querySelectorAll('.step-card')), {
+      glowColor: '16, 170, 190',
+      spotlightRadius: 260,
+      particleCount: 6,
+      enableStars: true,
+      enableMagnetism: true,
+      clickEffect: true
+    });
+  }
 </script>
 <script src="assets/js/staggered-menu.js"></script>
 <script>

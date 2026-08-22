@@ -413,6 +413,8 @@ main{padding-top:var(--header-h)}
 .logo-loop-track img{width:auto;flex:0 0 auto;filter:brightness(0) invert(1);opacity:.7;transition:opacity var(--dur-2) var(--ease-out)}
 .logo-loop-track img:hover{opacity:1}
 .logo-loop-track img.logo-color{filter:none;opacity:1}
+.ret-light .logo-loop-track img{filter:brightness(0);opacity:.6}
+.ret-light .logo-loop-track img.logo-color{filter:none;opacity:1}
 /* Cada SVG trae un relleno interno distinto entre su viewBox y el trazo real
    (medido con getBBox): a igual alto de caja, el alto de letra visible no es
    el mismo. Se compensa por logo para que el peso visual quede parejo. */
