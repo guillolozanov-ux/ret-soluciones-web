@@ -435,6 +435,26 @@ main{padding-top:var(--header-h)}
 .logo-loop-track img.logo-lumu{height:24px}
 .logo-loop-track img.logo-google{height:24px}
 @keyframes logo-loop-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--seq-width, 0px)))}}
+
+/* ============ LOGO GRID (Aliados — cuadrícula estática con hover) ============ */
+.logo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--space-5)}
+.logo-grid-item{display:flex;align-items:center;justify-content:center;height:120px;background:var(--surface-card);border:1px solid var(--border-1);border-radius:var(--radius-2);transition:border-color var(--dur-2) var(--ease-out),box-shadow var(--dur-2) var(--ease-out)}
+.logo-grid-item:hover{border-color:var(--border-accent);box-shadow:0 8px 24px rgba(9,24,29,.08)}
+.logo-grid-item img{width:auto;max-width:70%;filter:brightness(0);opacity:.75;transition:transform var(--dur-2) var(--ease-out),opacity var(--dur-2) var(--ease-out)}
+.logo-grid-item:hover img{transform:scale(1.12);opacity:1}
+.logo-grid-item img.logo-color{filter:none;opacity:1}
+.logo-grid-item img.logo-eset{height:30px}
+.logo-grid-item img.logo-fortinet{height:28px}
+.logo-grid-item img.logo-sophos{height:28px}
+.logo-grid-item img.logo-acronis{height:42px}
+.logo-grid-item img.logo-microsoft{height:26px}
+.logo-grid-item img.logo-stellarcyber{height:30px}
+.logo-grid-item img.logo-safetica{height:28px}
+.logo-grid-item img.logo-trendmicro{height:28px}
+.logo-grid-item img.logo-lumu{height:28px}
+.logo-grid-item img.logo-google{height:28px}
+@media (max-width:900px){.logo-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.logo-grid{grid-template-columns:repeat(2,1fr)}.logo-grid-item{height:96px}}
 @media (prefers-reduced-motion:reduce){.logo-loop-track{animation:none!important}}
 .footer-bottom{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:var(--fs-2xs);color:var(--text-muted);flex-wrap:wrap;gap:var(--space-3)}
 
