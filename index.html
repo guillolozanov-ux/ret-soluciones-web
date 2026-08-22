@@ -310,21 +310,22 @@
   }
 </script>
 <script>
+  var __heroStrokeIsMobile = window.matchMedia('(max-width:640px)').matches;
   var __strokeCfg = {
     strokeColor: '#2BB7C0',
     fillColor: '#FDFDFC',
-    strokeWidth: 1.8,
+    strokeWidth: __heroStrokeIsMobile ? 1.2 : 1.8,
     drawDuration: 1.1,
     fillDelay: 0.12,
     stagger: 0.028,
     ease: 'power2.out',
     trigger: 'mount',
     fillMode: 'wipe',
-    fontSize: 96,
+    fontSize: __heroStrokeIsMobile ? 52 : 96,
     fontWeight: 400,
     fontFamily: 'var(--font-display)',
     letterSpacing: -1,
-    lineHeightRatio: 0.98
+    lineHeightRatio: __heroStrokeIsMobile ? 0.92 : 0.98
   };
   mountStrokeText(document.getElementById('hero-stroke-1'), Object.assign({}, __strokeCfg, { text: 'SU OPERACIÓN' }));
   mountStrokeText(document.getElementById('hero-stroke-2'), Object.assign({}, __strokeCfg, { text: 'NO SE DETIENE' }));

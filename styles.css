@@ -520,6 +520,9 @@ main{padding-top:var(--header-h)}
 .hero-title-stroke{display:flex;flex-direction:column}
 .hero-title-stroke .stroke-text{margin-top:-8px}
 .hero-title-stroke .stroke-text:first-child{margin-top:0}
+@media (max-width:640px){
+  .hero-title-stroke .stroke-text{margin-top:-14px;padding:0 var(--space-4)}
+}
 
 /* ============ MAGIC BENTO (glow interactivo — sección IaaS) ============ */
 .magic-bento-card{position:relative;--glow-x:50%;--glow-y:50%;--glow-intensity:0;--glow-radius:200px;--glow-color:16,170,190;overflow:hidden}
