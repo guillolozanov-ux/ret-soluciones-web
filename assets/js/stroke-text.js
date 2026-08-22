@@ -121,6 +121,12 @@
       var pad = Math.max(config.strokeWidth || 1, config.fontSize * 0.1);
       var box = { x: bbox.x - pad, y: bbox.y - pad, width: bbox.width + pad * 2, height: bbox.height + pad * 2 };
       svg.setAttribute('viewBox', box.x + ' ' + box.y + ' ' + box.width + ' ' + box.height);
+
+      var renderedWidth = container.clientWidth;
+      if (renderedWidth && box.width) {
+        var fitHeight = box.height * (renderedWidth / box.width);
+        container.style.setProperty('--stroke-text-height', Math.round(fitHeight) + 'px');
+      }
       if (wipeRect) {
         wipeRect.setAttribute('x', box.x);
         wipeRect.setAttribute('y', box.y);
