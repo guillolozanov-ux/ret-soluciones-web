@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto — RET Soluciones</title>
+<meta name="description" content="Solicite un diagnóstico de infraestructura y ciberseguridad. Un ingeniero de RET Soluciones responde en menos de 4 horas hábiles.">
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/lucide@0.544.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+<div id="site-preloader" class="site-preloader" aria-hidden="true">
+  <div class="preloader-logo">
+    <img src="assets/logo-ret-blanco.png" class="preloader-logo-base" alt="">
+    <div class="preloader-logo-shimmer"></div>
+  </div>
+</div>
+
+
+<header class="site-header" id="site-header">
+  <div class="wrap">
+    <nav class="site-nav">
+      <a href="index.html">Inicio</a>
+      <a href="conocenos.html">Conócenos</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-trigger" aria-expanded="false">Portafolio</button>
+        <div class="nav-dropdown-panel">
+          <a href="xdr.html">XDR+</a>
+          <a href="dlp.html">DLP</a>
+          <a href="iaas.html">IaaS</a>
+          <a href="ciberseguridad.html">Ciberseguridad</a>
+        </div>
+      </div>
+      <a href="aliados.html">Aliados</a>
+      <a href="contacto.html" class="active">Contacto</a>
+    </nav>
+    <a href="index.html" class="brand logo-shimmer"><img src="assets/logo-ret-blanco.png" alt="RET Soluciones" class="logo-shimmer-base"><span class="logo-shimmer-fx" aria-hidden="true"></span></a>
+    <div class="site-header-right">
+      <span class="phone"><svg data-lucide="phone" class="icon-13"></svg> +57 (5) 331 2448</span>
+      <a href="contacto.html" class="btn btn-primary sm">Solicitar diagnóstico</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú"><svg data-lucide="menu" class="icon-20"></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap grid-2" style="padding:var(--space-11) var(--gutter-lg) var(--space-13)">
+    <div>
+      <div class="eyebrow"><span class="idx">—</span><span>Contacto</span></div>
+      <h1 class="h-display xl" style="margin:var(--space-6) 0 var(--space-5)">Diagnóstico<br>en 5 días</h1>
+      <p style="margin:0;max-width:420px;font-size:var(--fs-md);line-height:var(--lh-body);color:var(--text-2)">
+        Un ingeniero revisa su infraestructura, mide la exposición y entrega un plan con costos y tiempos. Sin compromiso de compra.
+      </p>
+      <hr class="divider" style="margin:var(--space-9) 0 var(--space-7)">
+      <div class="grid-2" style="gap:var(--space-7)">
+        <div class="stat sm"><div class="stat-value">5 días</div><div class="stat-label">Entrega del diagnóstico</div></div>
+        <div class="stat sm"><div class="stat-value">&lt; 4 h</div><div class="stat-label">Respuesta a solicitudes</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-4);margin-top:var(--space-9);font-family:var(--font-mono);font-size:var(--fs-2xs);letter-spacing:var(--tracking-wide);color:var(--text-3)">
+        <span style="display:flex;gap:8px;align-items:center"><svg data-lucide="map-pin" class="icon-13"></svg> Barranquilla, Colombia</span>
+        <span style="display:flex;gap:8px;align-items:center"><svg data-lucide="phone" class="icon-13"></svg> +57 (5) 331 2448 · +57 333 733 0444</span>
+        <span style="display:flex;gap:8px;align-items:center"><svg data-lucide="mail" class="icon-13"></svg> info@ret.com.co · ventas@ret.com.co</span>
+        <span class="status-dot live pulse"><span class="dot"></span>Soporte 24x7 para clientes gestionados</span>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0">
+      <div class="card-body" style="padding:var(--space-9)">
+
+        <form id="contact-form" style="display:flex;flex-direction:column;gap:var(--space-6)">
+          <div class="grid-2" style="gap:var(--space-5)">
+            <div class="field">
+              <label for="n">Nombre</label>
+              <input class="input" id="n" name="nombre" placeholder="Nombre y apellido" required>
+            </div>
+            <div class="field">
+              <label for="e">Empresa</label>
+              <input class="input" id="e" name="empresa" placeholder="Razón social" required>
+            </div>
+            <div class="field">
+              <label for="c">Correo corporativo</label>
+              <input class="input" id="c" name="correo" type="email" placeholder="nombre@empresa.com" required>
+            </div>
+            <div class="field">
+              <label for="t">Teléfono</label>
+              <input class="input" id="t" name="telefono" placeholder="+57" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="servicio">Servicio de interés</label>
+            <select class="select" id="servicio" name="servicio">
+              <option value="xdr">XDR+ / CyberSOC</option>
+              <option value="dlp">DLP</option>
+              <option value="iaas">IaaS / Backups</option>
+              <option value="ciberseguridad">Ciberseguridad</option>
+              <option value="lic">Licenciamiento</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="alcance">Alcance</label>
+            <textarea class="textarea" id="alcance" name="alcance" rows="4" placeholder="Describa la infraestructura actual."></textarea>
+            <span class="hint">Sedes, servidores y número de equipos.</span>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" id="acepta" name="acepta">
+            <span class="box"><svg viewBox="0 0 9 7" fill="none"><path d="M1 3.5L3.2 5.7L8 1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Autorizo el tratamiento de mis datos
+          </label>
+          <button type="submit" class="btn btn-primary lg full" id="submit-btn" disabled>Enviar solicitud</button>
+        </form>
+
+        <div class="alert alert-ok" id="sent-alert" style="display:none">
+          <svg data-lucide="check-circle" class="icon-16"></svg>
+          <div>
+            <div class="alert-title">Solicitud registrada</div>
+            <div class="alert-body">Un ingeniero de RET responde en menos de 4 horas hábiles.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <span class="logo-shimmer"><img src="assets/logo-ret-blanco.png" alt="RET Soluciones" class="logo-shimmer-base"><span class="logo-shimmer-fx" aria-hidden="true"></span></span>
+        <p>Barranquilla, Colombia. Operamos infraestructura y seguridad para empresas del Caribe colombiano desde 2005.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg data-lucide="facebook" class="icon-16"></svg></a>
+          <a href="#" aria-label="Instagram"><svg data-lucide="instagram" class="icon-16"></svg></a>
+          <a href="#" aria-label="YouTube"><svg data-lucide="youtube" class="icon-16"></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <span class="col-title">Servicios</span>
+        <a href="xdr.html">XDR+ / CyberSOC</a>
+        <a href="dlp.html">DLP</a>
+        <a href="iaas.html">IaaS / Backups</a>
+        <a href="ciberseguridad.html">Ciberseguridad</a>
+      </div>
+      <div class="footer-col">
+        <span class="col-title">Fabricantes</span>
+        <div class="footer-fabricantes">
+          <a href="aliados.html">ESET — Gold Partner</a>
+          <a href="aliados.html">Stellar Cyber</a>
+          <a href="aliados.html">Safetica</a>
+          <a href="aliados.html">Sophos</a>
+          <a href="aliados.html">Acronis</a>
+          <a href="aliados.html">Trend Micro</a>
+          <a href="aliados.html">Luma</a>
+          <a href="aliados.html">Fortinet</a>
+          <a href="aliados.html">Microsoft</a>
+          <a href="aliados.html">Google</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <span class="col-title">Empresa</span>
+        <a href="conocenos.html">Conócenos</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="mailto:info@ret.com.co">info@ret.com.co</a>
+        <a href="mailto:ventas@ret.com.co">ventas@ret.com.co</a>
+      </div>
+    </div>
+    <hr class="divider" style="margin:var(--space-9) 0 var(--space-5)">
+    <div class="footer-bottom">
+      <span>© 2026 RET Soluciones S.A.S. — Seguridad informática confiable. Todos los derechos reservados.</span>
+      <span>Política de tratamiento de datos</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/fold-text.js"></script>
+<script src="assets/js/specular-button.js"></script>
+<script src="assets/js/staggered-menu.js"></script>
+<script>
+  (function () {
+    var __navToggle = document.getElementById('nav-toggle');
+    if (__navToggle && window.mountStaggeredMenu) {
+      window.mountStaggeredMenu(__navToggle, {
+        position: 'right',
+        colors: ['#0C8998', '#2BB7C0'],
+        items: [
+          { label: 'Inicio', link: 'index.html', ariaLabel: 'Ir a inicio' },
+          { label: 'Conócenos', link: 'conocenos.html', ariaLabel: 'Conócenos' },
+          { label: 'XDR+ / CyberSOC', link: 'xdr.html', ariaLabel: 'XDR+ / CyberSOC' },
+          { label: 'DLP', link: 'dlp.html', ariaLabel: 'DLP' },
+          { label: 'IaaS / Backups', link: 'iaas.html', ariaLabel: 'IaaS / Backups' },
+          { label: 'Ciberseguridad', link: 'ciberseguridad.html', ariaLabel: 'Ciberseguridad' },
+          { label: 'Aliados', link: 'aliados.html', ariaLabel: 'Aliados' },
+          { label: 'Contacto', link: 'contacto.html', ariaLabel: 'Contacto' }
+        ],
+        socialItems: [
+          { label: 'Facebook', link: '#' },
+          { label: 'Instagram', link: '#' },
+          { label: 'YouTube', link: '#' }
+        ],
+        displaySocials: true,
+        displayItemNumbering: true,
+        accentColor: '#0C8998'
+      });
+    }
+  })();
+</script>
+<script src="script.js"></script>
+</body>
+</html>

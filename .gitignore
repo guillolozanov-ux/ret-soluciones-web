@@ -1,0 +1,15 @@
+.vercel
+.DS_Store
+.agents/
+.claude/
+.codex/
+.cursor/
+.gemini/
+.grok/
+.hermes/
+.kiro/
+.opencode/
+.pi/
+.qoder/
+.rovodev/
+.vibe/

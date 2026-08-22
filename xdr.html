@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XDR+ / CyberSOC — RET Soluciones</title>
+<meta name="description" content="Detección y respuesta gestionada 24x7 sobre endpoints, red y correo. MTTD 6 min, MTTR 11 min. Analistas propios en Barranquilla.">
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/lucide@0.544.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+<div id="site-preloader" class="site-preloader" aria-hidden="true">
+  <div class="preloader-logo">
+    <img src="assets/logo-ret-blanco.png" class="preloader-logo-base" alt="">
+    <div class="preloader-logo-shimmer"></div>
+  </div>
+</div>
+
+
+<header class="site-header" id="site-header">
+  <div class="wrap">
+    <nav class="site-nav">
+      <a href="index.html">Inicio</a>
+      <a href="conocenos.html">Conócenos</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-trigger" aria-expanded="false">Portafolio</button>
+        <div class="nav-dropdown-panel">
+          <a href="xdr.html" class="active">XDR+</a>
+          <a href="dlp.html">DLP</a>
+          <a href="iaas.html">IaaS</a>
+          <a href="ciberseguridad.html">Ciberseguridad</a>
+        </div>
+      </div>
+      <a href="aliados.html">Aliados</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <a href="index.html" class="brand logo-shimmer"><img src="assets/logo-ret-blanco.png" alt="RET Soluciones" class="logo-shimmer-base"><span class="logo-shimmer-fx" aria-hidden="true"></span></a>
+    <div class="site-header-right">
+      <span class="phone"><svg data-lucide="phone" class="icon-13"></svg> +57 (5) 331 2448</span>
+      <a href="contacto.html" class="btn btn-primary sm">Solicitar diagnóstico</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú"><svg data-lucide="menu" class="icon-20"></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="image-panel" style="border-bottom:1px solid var(--border-1)">
+    <div class="image-panel-bg" style="background-image:url('assets/bg-holo-datacenter.png')"></div>
+    <div class="image-panel-veil veil-flat"></div>
+    <div class="image-panel-content">
+      <div class="wrap" style="padding-top:var(--space-11);padding-bottom:var(--space-10)">
+        <div class="spaced-title sm">Producto insignia</div>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:var(--space-9);margin-top:var(--space-6);flex-wrap:wrap">
+          <h1 class="h-display xl" style="margin:0;max-width:640px">XDR+ / CyberSOC</h1>
+          <div style="display:flex;gap:var(--space-4);flex-wrap:wrap">
+            <a href="contacto.html" class="btn btn-primary">Solicitar diagnóstico</a>
+            <button class="btn btn-secondary"><svg data-lucide="download" class="icon-15"></svg> Ficha técnica</button>
+          </div>
+        </div>
+        <p style="margin:var(--space-6) 0 var(--space-8);max-width:620px;font-size:var(--fs-md);line-height:var(--lh-body);color:var(--text-2)">
+          Un solo equipo correlaciona la telemetría de endpoints, red y correo. Cuando algo entra, se contiene antes de que la operación se detenga.
+        </p>
+        <div class="grid-4">
+          <div class="metric-tile">
+            <div class="metric-head"><span class="metric-label">MTTD</span><svg data-lucide="radar" class="icon-15"></svg></div>
+            <div class="metric-row"><span class="metric-value">6</span><span class="metric-unit">min</span></div>
+            <div class="metric-footer">Detección media, 90 días</div>
+          </div>
+          <div class="metric-tile">
+            <div class="metric-head"><span class="metric-label">MTTR</span><svg data-lucide="timer" class="icon-15"></svg></div>
+            <div class="metric-row"><span class="metric-value">11</span><span class="metric-unit">min</span><span class="metric-delta">-4 min 30d</span></div>
+            <div class="metric-footer">Respuesta media</div>
+          </div>
+          <div class="metric-tile">
+            <div class="metric-head"><span class="metric-label">Activos cubiertos</span><svg data-lucide="server" class="icon-15"></svg></div>
+            <div class="metric-row"><span class="metric-value">412</span><span class="metric-unit">/ 452</span><span class="metric-delta warn">91%</span></div>
+          </div>
+          <div class="metric-tile">
+            <div class="metric-head"><span class="metric-label">Casos cerrados</span><svg data-lucide="folder-check" class="icon-15"></svg></div>
+            <div class="metric-row"><span class="metric-value">38</span><span class="metric-delta">mes actual</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="wrap" style="padding-top:var(--space-10);padding-bottom:var(--space-11)">
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" class="active" data-tab="resumen">Resumen</button>
+      <button role="tab" aria-selected="false" data-tab="detalle">Detalle técnico</button>
+      <button role="tab" aria-selected="false" data-tab="sla">SLA y reportes</button>
+    </div>
+
+    <div style="margin-top:var(--space-8)">
+
+      <div class="tab-panel active" id="tab-resumen">
+        <div class="grid-2" style="align-items:start">
+          <div>
+            <div class="phase-flow vertical" id="phase-flow-xdr">
+              <div class="phase" data-phase="prevencion"><div class="phase-top"><span class="phase-idx">01</span><svg data-lucide="shield" class="icon-16"></svg></div><div class="phase-title">Prevención</div><div class="phase-body">Endurecimiento, segmentación y control de aplicaciones.</div><div class="phase-meta">ESET · Fortinet</div><span class="phase-bar"></span></div>
+              <div class="phase" data-phase="deteccion"><div class="phase-top"><span class="phase-idx">02</span><svg data-lucide="radar" class="icon-16"></svg></div><div class="phase-title">Detección</div><div class="phase-body">Reglas de correlación afinadas por sector y tamaño de red.</div><div class="phase-meta">MTTD 6 min</div><span class="phase-bar"></span></div>
+              <div class="phase active" data-phase="respuesta"><div class="phase-top"><span class="phase-idx">03</span><svg data-lucide="zap" class="icon-16"></svg></div><div class="phase-title">Respuesta</div><div class="phase-body">Aislamiento del equipo, bloqueo del indicador y reporte al contacto técnico.</div><div class="phase-meta">SLA 15 min</div><span class="phase-bar"></span></div>
+              <div class="phase" data-phase="prediccion"><div class="phase-top"><span class="phase-idx">04</span><svg data-lucide="line-chart" class="icon-16"></svg></div><div class="phase-title">Predicción</div><div class="phase-body">Inventario de exposición y plan de parcheo priorizado.</div><div class="phase-meta">Informe mensual</div><span class="phase-bar"></span></div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:var(--space-5)">
+            <div class="card raised notch">
+              <div class="card-body">
+                <div class="eyebrow muted"><span class="idx">—</span><span>Para el gerente general</span></div>
+                <p style="margin:var(--space-5) 0 0;font-size:var(--fs-sm);line-height:var(--lh-body);color:var(--text-2)">
+                  El servicio se mide en horas de operación no perdidas. El informe mensual traduce cada incidente a impacto en el negocio.
+                </p>
+              </div>
+            </div>
+            <div class="card raised">
+              <div class="card-body">
+                <div class="eyebrow muted"><span class="idx">—</span><span>Para el jefe de infraestructura</span></div>
+                <p style="margin:var(--space-5) 0 0;font-size:var(--fs-sm);line-height:var(--lh-body);color:var(--text-2)">
+                  Acceso a la consola, exportación de eventos y ventana de mantenimiento coordinada. Sin caja negra.
+                </p>
+                <div style="display:flex;gap:8px;margin-top:var(--space-5)">
+                  <span class="tooltip"><span class="badge badge-info">SLA</span><span class="tooltip-bubble">RPO 15 min · RTO 4 h</span></span>
+                  <span class="badge badge-signal">API de eventos</span>
+                </div>
+              </div>
+            </div>
+            <div class="card raised">
+              <div class="card-body">
+                <div class="eyebrow muted"><span class="idx">—</span><span>Capacidades de la plataforma</span></div>
+                <ul class="feature-list">
+                  <li><svg data-lucide="database" class="icon-16"></svg>SIEM para recolección de registros y correlación de eventos.</li>
+                  <li><svg data-lucide="workflow" class="icon-16"></svg>SOAR para orquestación, automatización y respuesta.</li>
+                  <li><svg data-lucide="shield-check" class="icon-16"></svg>Protección de marca y riesgo digital.</li>
+                  <li><svg data-lucide="search" class="icon-16"></svg>Cacería de amenazas.</li>
+                  <li><svg data-lucide="activity" class="icon-16"></svg>Análisis y remediación en tiempo real.</li>
+                  <li><svg data-lucide="clock" class="icon-16"></svg>Servicio 24x7.</li>
+                </ul>
+              </div>
+            </div>
+            <span class="status-dot live pulse"><span class="dot"></span>Turno activo · Barranquilla</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-detalle">
+        <div class="card pad-0">
+          <div class="card-body">
+            <div class="data-table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Capacidad</th><th>Tecnología</th><th>Cobertura</th><th class="right">Estado</th></tr></thead>
+                <tbody>
+                  <tr><td>Telemetría de endpoint</td><td>ESET Inspect</td><td>412 activos</td><td class="right"><span class="badge badge-ok"><span class="dot"></span>Activo</span></td></tr>
+                  <tr><td>Inspección de red</td><td>FortiGate</td><td>3 sedes</td><td class="right"><span class="badge badge-ok"><span class="dot"></span>Activo</span></td></tr>
+                  <tr><td>Correo y colaboración</td><td>Microsoft 365</td><td>1.140 buzones</td><td class="right"><span class="badge badge-ok"><span class="dot"></span>Activo</span></td></tr>
+                  <tr><td>Contención automática</td><td>RET CyberSOC</td><td>Endpoints críticos</td><td class="right"><span class="badge badge-warn"><span class="dot"></span>Parcial</span></td></tr>
+                  <tr><td>Caza de amenazas</td><td>Analista de turno</td><td>Semanal</td><td class="right"><span class="badge badge-ok"><span class="dot"></span>Activo</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-sla">
+        <div style="display:flex;flex-direction:column;gap:var(--space-5)">
+          <div class="alert alert-info">
+            <svg data-lucide="info" class="icon-16"></svg>
+            <div>
+              <div class="alert-title">Medición auditable</div>
+              <div class="alert-body">Los tiempos se calculan sobre el registro de la consola, no sobre el reporte manual del analista.</div>
+            </div>
+          </div>
+          <div class="card pad-0">
+            <div class="card-body">
+              <div class="data-table-wrap">
+                <table class="data-table">
+                  <thead><tr><th>Severidad</th><th class="right">Acuse</th><th class="right">Contención</th><th class="right">Reporte</th></tr></thead>
+                  <tbody>
+                    <tr><td>Crítica</td><td class="mono right">15 min</td><td class="mono right">1 h</td><td class="mono right">24 h</td></tr>
+                    <tr><td>Alta</td><td class="mono right">30 min</td><td class="mono right">4 h</td><td class="mono right">48 h</td></tr>
+                    <tr><td>Media</td><td class="mono right">2 h</td><td class="mono right">1 día háb.</td><td class="mono right">Semanal</td></tr>
+                    <tr><td>Baja</td><td class="mono right">1 día háb.</td><td class="mono right">3 días háb.</td><td class="mono right">Mensual</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <span class="logo-shimmer"><img src="assets/logo-ret-blanco.png" alt="RET Soluciones" class="logo-shimmer-base"><span class="logo-shimmer-fx" aria-hidden="true"></span></span>
+        <p>Barranquilla, Colombia. Operamos infraestructura y seguridad para empresas del Caribe colombiano desde 2005.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg data-lucide="facebook" class="icon-16"></svg></a>
+          <a href="#" aria-label="Instagram"><svg data-lucide="instagram" class="icon-16"></svg></a>
+          <a href="#" aria-label="YouTube"><svg data-lucide="youtube" class="icon-16"></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <span class="col-title">Servicios</span>
+        <a href="xdr.html">XDR+ / CyberSOC</a>
+        <a href="dlp.html">DLP</a>
+        <a href="iaas.html">IaaS / Backups</a>
+        <a href="ciberseguridad.html">Ciberseguridad</a>
+      </div>
+      <div class="footer-col">
+        <span class="col-title">Fabricantes</span>
+        <div class="footer-fabricantes">
+          <a href="aliados.html">ESET — Gold Partner</a>
+          <a href="aliados.html">Stellar Cyber</a>
+          <a href="aliados.html">Safetica</a>
+          <a href="aliados.html">Sophos</a>
+          <a href="aliados.html">Acronis</a>
+          <a href="aliados.html">Trend Micro</a>
+          <a href="aliados.html">Luma</a>
+          <a href="aliados.html">Fortinet</a>
+          <a href="aliados.html">Microsoft</a>
+          <a href="aliados.html">Google</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <span class="col-title">Empresa</span>
+        <a href="conocenos.html">Conócenos</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="mailto:info@ret.com.co">info@ret.com.co</a>
+        <a href="mailto:ventas@ret.com.co">ventas@ret.com.co</a>
+      </div>
+    </div>
+    <hr class="divider" style="margin:var(--space-9) 0 var(--space-5)">
+    <div class="footer-bottom">
+      <span>© 2026 RET Soluciones S.A.S. — Seguridad informática confiable. Todos los derechos reservados.</span>
+      <span>Política de tratamiento de datos</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/fold-text.js"></script>
+<script src="assets/js/specular-button.js"></script>
+<script src="assets/js/staggered-menu.js"></script>
+<script>
+  (function () {
+    var __navToggle = document.getElementById('nav-toggle');
+    if (__navToggle && window.mountStaggeredMenu) {
+      window.mountStaggeredMenu(__navToggle, {
+        position: 'right',
+        colors: ['#0C8998', '#2BB7C0'],
+        items: [
+          { label: 'Inicio', link: 'index.html', ariaLabel: 'Ir a inicio' },
+          { label: 'Conócenos', link: 'conocenos.html', ariaLabel: 'Conócenos' },
+          { label: 'XDR+ / CyberSOC', link: 'xdr.html', ariaLabel: 'XDR+ / CyberSOC' },
+          { label: 'DLP', link: 'dlp.html', ariaLabel: 'DLP' },
+          { label: 'IaaS / Backups', link: 'iaas.html', ariaLabel: 'IaaS / Backups' },
+          { label: 'Ciberseguridad', link: 'ciberseguridad.html', ariaLabel: 'Ciberseguridad' },
+          { label: 'Aliados', link: 'aliados.html', ariaLabel: 'Aliados' },
+          { label: 'Contacto', link: 'contacto.html', ariaLabel: 'Contacto' }
+        ],
+        socialItems: [
+          { label: 'Facebook', link: '#' },
+          { label: 'Instagram', link: '#' },
+          { label: 'YouTube', link: '#' }
+        ],
+        displaySocials: true,
+        displayItemNumbering: true,
+        accentColor: '#0C8998'
+      });
+    }
+  })();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
