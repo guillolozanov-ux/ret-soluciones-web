@@ -142,7 +142,8 @@ h2.h-display{font-size:var(--fs-2xl);line-height:var(--lh-snug)}
 .h-display.xl{font-size:var(--fs-3xl);line-height:var(--lh-snug)}
 
 /* ============ BUTTON ============ */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-text);font-weight:var(--weight-bold);font-size:var(--fs-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;padding:11px 22px;border-radius:var(--radius-pill);cursor:pointer;border:1px solid transparent;transition:background var(--dur-2) var(--ease-out-strong),color var(--dur-2) var(--ease-out-strong),border-color var(--dur-2) var(--ease-out-strong),transform var(--dur-2) var(--ease-out-strong);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-text);font-weight:var(--weight-bold);font-size:var(--fs-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;padding:11px 22px;border-radius:var(--radius-pill);cursor:pointer;border:1px solid transparent;transition:background var(--dur-2) var(--ease-out-strong),color var(--dur-2) var(--ease-out-strong),border-color var(--dur-2) var(--ease-out-strong),transform var(--dur-1) var(--ease-out-strong);}
+.btn:active{transform:scale(.97)}
 .btn svg{width:15px;height:15px;flex:0 0 auto}
 .btn.lg{padding:15px 26px;font-size:var(--fs-sm);gap:10px}
 .btn.sm{padding:7px 12px;font-size:var(--fs-2xs);gap:6px}
@@ -153,7 +154,7 @@ h2.h-display{font-size:var(--fs-2xl);line-height:var(--lh-snug)}
   background:
     linear-gradient(var(--ink-950),var(--ink-950)) padding-box,
     linear-gradient(135deg,var(--teal-300) 0%,rgba(43,183,192,0) 65%) border-box;
-  transition:box-shadow var(--dur-2) var(--ease-out),filter var(--dur-1) var(--ease-out);
+  transition:box-shadow var(--dur-2) var(--ease-out),filter var(--dur-1) var(--ease-out),transform var(--dur-1) var(--ease-out-strong);
 }
 .btn-primary:hover{box-shadow:0 0 18px rgba(16,170,190,.5)}
 .btn-primary:active{filter:brightness(.82)}
@@ -255,7 +256,7 @@ h2.h-display{font-size:var(--fs-2xl);line-height:var(--lh-snug)}
 
 .checkbox{display:inline-flex;align-items:center;gap:var(--space-4);cursor:pointer;font-size:var(--fs-base);color:var(--text-2)}
 .checkbox input{position:absolute;opacity:0;width:0;height:0}
-.checkbox .box{width:16px;height:16px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;border-radius:var(--radius-1);border:1px solid var(--border-2);background:transparent;transition:all var(--dur-1) var(--ease-out)}
+.checkbox .box{width:16px;height:16px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;border-radius:var(--radius-1);border:1px solid var(--border-2);background:transparent;transition:background var(--dur-1) var(--ease-out),border-color var(--dur-1) var(--ease-out)}
 .checkbox .box svg{width:9px;height:7px;display:none;stroke:var(--ink-1000);stroke-width:2.5}
 .checkbox input:checked ~ .box{border-color:var(--teal-500);background:var(--teal-500)}
 .checkbox input:checked ~ .box svg{display:block}
@@ -364,7 +365,9 @@ main{padding-top:var(--header-h)}
 }
 
 /* ============ STAGGERED MENU (mobile nav) ============ */
-.nav-toggle.sm-toggle{display:none;align-items:center;gap:.55rem;background:none;border:1px solid var(--border-2);border-radius:var(--radius-pill);color:var(--text-1);padding:8px 14px;cursor:pointer;font-family:var(--font-mono);font-size:var(--fs-xs);letter-spacing:var(--tracking-label);text-transform:uppercase;line-height:1}
+.nav-toggle.sm-toggle{display:none;align-items:center;gap:.55rem;background:none;border:1px solid var(--border-2);border-radius:var(--radius-pill);color:var(--text-1);padding:8px 14px;cursor:pointer;font-family:var(--font-mono);font-size:var(--fs-xs);letter-spacing:var(--tracking-label);text-transform:uppercase;line-height:1;transition:border-color var(--dur-1) var(--ease-out),transform var(--dur-1) var(--ease-out-strong)}
+.nav-toggle.sm-toggle:hover{border-color:var(--border-accent)}
+.nav-toggle.sm-toggle:active{transform:scale(.95)}
 @media (max-width:900px){.nav-toggle.sm-toggle{display:inline-flex}}
 .sm-toggle:focus-visible{outline:2px solid var(--teal-400);outline-offset:3px}
 .sm-toggle-textWrap{position:relative;display:inline-block;height:1em;overflow:hidden;white-space:nowrap}
