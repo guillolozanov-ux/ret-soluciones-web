@@ -243,6 +243,14 @@ h2.h-display{font-size:var(--fs-2xl);line-height:var(--lh-snug)}
 .alert-warn{background:rgba(232,163,23,.08);border-color:rgba(232,163,23,.3);color:var(--status-warn)}
 .alert-crit{background:rgba(229,72,77,.08);border-color:rgba(229,72,77,.35);color:var(--status-crit)}
 
+/* ============ COOKIE BANNER ============ */
+.cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface-card);border-top:1px solid var(--border-1);box-shadow:var(--shadow-2);transform:translateY(100%);opacity:0;transition:transform var(--dur-3) var(--ease-out),opacity var(--dur-3) var(--ease-out)}
+.cookie-banner.is-visible{transform:translateY(0);opacity:1}
+.cookie-banner-inner{max-width:1120px;margin:0 auto;padding:var(--space-6) var(--gutter-lg);display:flex;align-items:center;justify-content:space-between;gap:var(--space-7);flex-wrap:wrap}
+.cookie-banner-inner p{margin:0;flex:1 1 320px;font-size:var(--fs-sm);line-height:var(--lh-body);color:var(--text-2)}
+.cookie-banner-actions{display:flex;gap:var(--space-4);flex:0 0 auto}
+@media (prefers-reduced-motion:reduce){.cookie-banner{transition:opacity var(--dur-2) var(--ease-out);transform:none}}
+
 /* ============ FORMS ============ */
 .field{display:flex;flex-direction:column;gap:var(--space-3)}
 .field label{font-family:var(--font-mono);font-size:var(--fs-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-3)}
