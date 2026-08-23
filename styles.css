@@ -472,14 +472,16 @@ main{padding-top:var(--header-h)}
 .footer-bottom{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:var(--fs-2xs);color:var(--text-muted);flex-wrap:wrap;gap:var(--space-3)}
 
 /* ============ STEPS LIST (IaaS) ============ */
-.steps-list{display:flex;flex-direction:column;gap:var(--space-5)}
-.step-card{background:var(--surface-card);border:1px solid var(--border-1);border-radius:var(--radius-2);padding:var(--space-7)}
-.step-head{display:flex;align-items:center;gap:var(--space-4)}
+.steps-list{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5)}
+@media (max-width:900px){.steps-list{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.steps-list{grid-template-columns:1fr}}
+.step-card{position:relative;overflow:hidden;background:var(--surface-card);border:1px solid var(--border-1);border-radius:var(--radius-2);padding:var(--space-7);display:flex;flex-direction:column}
+.step-card .step-idx{position:absolute;top:-.12em;right:var(--space-5);font-family:var(--font-display);font-weight:var(--display-weight);font-size:96px;line-height:1;color:var(--text-1);opacity:.05;letter-spacing:0;z-index:0;pointer-events:none}
+.step-head{position:relative;z-index:1;display:flex;align-items:center;gap:var(--space-4)}
 .step-head svg{color:var(--teal-400);flex:0 0 auto}
-.step-idx{font-family:var(--font-mono);font-size:var(--fs-2xs);letter-spacing:var(--tracking-label);color:var(--text-muted)}
 .step-title{margin:0;min-width:0;overflow-wrap:anywhere;font-family:var(--font-display);font-weight:var(--display-weight);font-size:var(--fs-md);text-transform:uppercase;color:var(--text-1)}
-.step-body{margin:var(--space-4) 0 0;font-size:var(--fs-sm);line-height:var(--lh-body);color:var(--text-3)}
-.tag-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-4)}
+.step-body{position:relative;z-index:1;margin:var(--space-4) 0 0;font-size:var(--fs-sm);line-height:var(--lh-body);color:var(--text-3)}
+.tag-list{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--space-4)}
 
 /* ============ FEATURE LIST ============ */
 .feature-list{list-style:none;margin:var(--space-4) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--space-3)}
@@ -622,7 +624,7 @@ main{padding-top:var(--header-h)}
 .ret-orb__content>.wrap{width:100%}
 
 /* ============ RET DATACENTER HOLOGRAM (racks de puntos, canvas 2D) ============ */
-.ret-dc{position:relative;width:100%;min-height:clamp(480px,80vh,860px);background:#000;overflow:hidden;isolation:isolate}
+.ret-dc{position:relative;width:100%;min-height:clamp(520px,84vh,920px);background:#000;overflow:hidden;isolation:isolate}
 .ret-dc__canvas{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0;pointer-events:none}
 .ret-dc__fade{position:absolute;left:0;right:0;bottom:0;height:min(220px,32%);background:linear-gradient(to bottom,transparent,#000 92%);z-index:0;pointer-events:none}
 .ret-dc__content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column}
