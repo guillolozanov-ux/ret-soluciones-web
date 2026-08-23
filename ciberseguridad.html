@@ -50,7 +50,7 @@
 <main>
   <div class="ret-wave" id="ciberseguridad-hero-wave" style="min-height:60vh;border-bottom:1px solid var(--border-1)">
     <canvas class="ret-wave__canvas"></canvas>
-    <img src="assets/ciberseguridad-hero-figure.png" alt="" class="hero-figure" aria-hidden="true">
+    <img src="assets/ciberseguridad-hero-figure.png" alt="" class="hero-figure" id="ciberseguridad-hero-figure" aria-hidden="true">
     <div class="ret-wave__content">
       <div class="wrap" style="padding-top:var(--space-13);padding-bottom:var(--space-13)">
         <div class="eyebrow"><span class="idx">—</span><span>Portafolio</span></div>
@@ -138,9 +138,14 @@
 <script src="assets/js/fold-text.js"></script>
 <script src="assets/js/specular-button.js"></script>
 <script src="assets/js/dot-wave.js"></script>
+<script src="assets/js/scroll-parallax.js"></script>
 <script>
   var __ciberseguridadWave = document.getElementById('ciberseguridad-hero-wave');
   if (__ciberseguridadWave) mountDotWave(__ciberseguridadWave, { DENSITY: 0.4, DOT_SCALE: 0.22, INTENSITY: 0.16 });
+  var __ciberseguridadFigure = document.getElementById('ciberseguridad-hero-figure');
+  if (__ciberseguridadFigure) mountScrollParallax(__ciberseguridadFigure, { amount: 70, trigger: __ciberseguridadWave });
+  var __ciberseguridadCanvas = __ciberseguridadWave && __ciberseguridadWave.querySelector('.ret-wave__canvas');
+  if (__ciberseguridadCanvas) mountScrollParallax(__ciberseguridadCanvas, { amount: 30, trigger: __ciberseguridadWave });
 </script>
 <script src="assets/js/staggered-menu.js"></script>
 <script>
