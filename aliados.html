@@ -49,22 +49,34 @@
 
 <main>
 
-  <div class="ret-wave" id="aliados-hero-wave" style="min-height:380px;border-bottom:1px solid var(--border-1)">
+  <div class="ret-wave" id="aliados-hero-wave" style="min-height:520px;border-bottom:1px solid var(--border-1)">
     <canvas class="ret-wave__canvas"></canvas>
     <div class="ret-wave__content">
-      <div class="wrap" style="padding-top:var(--space-13);padding-bottom:var(--space-10)">
-        <div class="eyebrow"><span class="idx">—</span><span>Aliados</span></div>
-        <h1 class="h-display xl" style="margin:var(--space-6) 0 var(--space-8);max-width:640px">Nuestros aliados</h1>
-        <p style="margin:0;max-width:560px;font-size:var(--fs-md);line-height:var(--lh-body);color:var(--text-2)">
-          Colaboramos con los principales desarrolladores y fabricantes del sector gracias a nuestras alianzas estratégicas. Marcas escritas en tipografía RET: no reconstruimos logotipos de fabricante sin autorización.
+      <div class="wrap" style="padding:var(--space-13) 0 var(--space-10);text-align:center">
+        <div class="spaced-title sm">Alianzas estratégicas</div>
+        <h1 class="ally-hero-title" style="margin-top:var(--space-6)">
+          <span class="h-display xl">Nuestros</span>
+          <span class="ally-orb" id="aliados-hero-orb"><canvas class="ret-orb__canvas"></canvas></span>
+          <span class="h-display xl">Aliados</span>
+        </h1>
+        <p style="margin:var(--space-6) auto 0;max-width:560px;font-size:var(--fs-md);line-height:var(--lh-body);color:var(--text-2)">
+          Colaboramos con los principales desarrolladores y fabricantes del sector para llevarle tecnología de punta con respaldo local. Marcas escritas en tipografía RET: no reconstruimos logotipos de fabricante sin autorización.
         </p>
+        <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;justify-content:center;margin-top:var(--space-8)">
+          <a href="contacto.html" class="btn btn-primary lg">Solicitar diagnóstico</a>
+          <a href="#aliados-grid" class="btn btn-secondary lg">Ver alianzas</a>
+        </div>
+        <div class="ally-hero-stats" id="aliados-hero-stats">
+          <div class="stat sm"><div class="stat-value">10</div><div class="stat-label">Fabricantes aliados</div></div>
+          <div class="stat sm"><div class="stat-value">+20</div><div class="stat-label">Años de trayectoria</div></div>
+        </div>
       </div>
     </div>
   </div>
 
-  <section class="ret-light" style="background:var(--surface-1);border-bottom:1px solid var(--border-1);padding:var(--space-13) 0">
+  <section class="ret-light" id="aliados-grid" style="background:var(--surface-1);border-bottom:1px solid var(--border-1);padding:var(--space-13) 0">
     <div class="wrap">
-      <div class="divider-label"><span>Alianzas tecnológicas</span><span></span></div>
+      <div class="divider-label"><span>// Confiado por</span><span></span></div>
       <div class="logo-grid" style="margin-top:var(--space-8)" role="region" aria-label="Fabricantes aliados">
         <div class="logo-grid-item"><img src="assets/logos/eset.svg" alt="ESET — Gold Partner" class="logo-color logo-eset"></div>
         <div class="logo-grid-item"><img src="assets/logos/fortinet.svg" alt="Fortinet" class="logo-fortinet"></div>
@@ -80,18 +92,57 @@
     </div>
   </section>
 
-  <section class="wrap" style="padding:var(--space-13) 0">
-    <div class="alert alert-info" style="max-width:560px">
-      <svg data-lucide="info" class="icon-16"></svg>
+  <section class="wrap section">
+    <div class="bullet-row">
+      <span>Ingenieros certificados</span><span class="bullet"></span>
+      <span>Soporte en español 24/7</span><span class="bullet"></span>
+      <span>Implementación local</span>
+    </div>
+    <hr class="divider" style="margin:var(--space-7) 0 var(--space-9)">
+    <div class="grid-2">
+      <div class="ally-credential">
+        <div class="ally-credential-mark"><img src="assets/favicon-512.png" alt=""></div>
+        <div class="ally-credential-caption">Equipo técnico<br>RET Soluciones</div>
+      </div>
       <div>
-        <div class="alert-title">Ficha en preparación</div>
-        <div class="alert-body">Estamos completando el detalle de cada alianza. Escríbanos si necesita información específica de un fabricante.</div>
+        <h2 class="h-display" style="margin:0 0 var(--space-7);max-width:560px">Somos el puente entre fabricantes globales y su operación en el Caribe colombiano</h2>
+        <a href="conocenos.html" class="btn btn-primary lg">Conócenos más</a>
       </div>
     </div>
-    <div style="margin-top:var(--space-8)">
-      <a href="contacto.html" class="btn btn-primary lg">Contáctenos</a>
+    <div class="partner-circles" style="margin-top:var(--space-11)">
+      <div class="partner-circle">
+        <img src="assets/logos/eset.svg" alt="ESET" class="logo-color">
+        <span class="partner-tier">ESET — Gold Partner</span>
+      </div>
+      <div class="partner-circle">
+        <img src="assets/logos/fortinet.svg" alt="Fortinet">
+        <span class="partner-tier">Fortinet — Partner</span>
+      </div>
+      <div class="partner-circle">
+        <img src="assets/logos/sophos.svg" alt="Sophos">
+        <span class="partner-tier">Sophos — Partner</span>
+      </div>
+      <div class="partner-circle">
+        <img src="assets/logos/acronis.svg" alt="Acronis">
+        <span class="partner-tier">Acronis — Cloud Partner</span>
+      </div>
     </div>
   </section>
+
+  <div class="ret-orb" id="aliados-cta-orb" style="min-height:clamp(420px,64vh,680px);border-top:1px solid var(--border-1)">
+    <canvas class="ret-orb__canvas"></canvas>
+    <div class="ret-orb__content">
+      <div class="wrap section" style="text-align:center">
+        <h2 class="h-display xl" style="margin:0 auto;max-width:640px">Cuéntenos sus requerimientos</h2>
+        <p style="margin:var(--space-6) auto 0;max-width:480px;font-size:var(--fs-md);line-height:var(--lh-body);color:var(--text-2)">
+          Un ingeniero revisa su infraestructura y propone la alianza tecnológica adecuada.
+        </p>
+        <div style="margin-top:var(--space-8)">
+          <a href="contacto.html" class="btn btn-primary lg">Solicitar diagnóstico</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -148,10 +199,20 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="assets/js/fold-text.js"></script>
 <script src="assets/js/specular-button.js"></script>
+<script src="assets/js/counter-stats.js"></script>
+<script>
+  var __aliadosHeroStats = document.getElementById('aliados-hero-stats');
+  if (__aliadosHeroStats) mountCounterStats(__aliadosHeroStats);
+</script>
 <script src="assets/js/dot-wave.js"></script>
+<script src="assets/js/nimbus-orb.js"></script>
 <script>
   var __aliadosWave = document.getElementById('aliados-hero-wave');
   if (__aliadosWave) mountDotWave(__aliadosWave, { DENSITY: 0.4, DOT_SCALE: 0.22, INTENSITY: 0.16 });
+  var __aliadosHeroOrb = document.getElementById('aliados-hero-orb');
+  if (__aliadosHeroOrb) mountNimbusOrb(__aliadosHeroOrb, { COUNT: 4000, ORB_SCALE: 0.78 });
+  var __aliadosCtaOrb = document.getElementById('aliados-cta-orb');
+  if (__aliadosCtaOrb) mountNimbusOrb(__aliadosCtaOrb);
 </script>
 <script src="assets/js/staggered-menu.js"></script>
 <script>

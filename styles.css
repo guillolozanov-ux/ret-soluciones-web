@@ -547,6 +547,32 @@ main{padding-top:var(--header-h)}
 @media (max-width:900px){.feature-split{grid-template-columns:1fr}.feature-split-nav{flex-direction:row;flex-wrap:wrap;position:static}.feature-split-item{flex:1 1 auto;justify-content:center;text-align:center}}
 @media (max-width:640px){.feature-split-nav{flex-direction:column}.feature-split-item{justify-content:flex-start;text-align:left}}
 
+/* ============ ALLY HERO (título partido + orbe central) ============ */
+.ally-hero-title{display:flex;align-items:center;justify-content:center;gap:var(--space-7);flex-wrap:wrap;margin:0;text-align:center}
+.ally-orb{position:relative;width:clamp(96px,12vw,180px);aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:#000;flex:0 0 auto;box-shadow:0 0 40px rgba(16,170,190,.28)}
+.ally-hero-stats{display:flex;gap:var(--space-9);justify-content:center;margin-top:var(--space-9)}
+.ally-hero-stats .stat{text-align:center}
+@media (max-width:640px){.ally-hero-stats{gap:var(--space-7)}}
+
+/* ============ BULLET ROW ============ */
+.bullet-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--space-6);font-family:var(--font-mono);font-size:var(--fs-xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-3)}
+.bullet-row .bullet{width:4px;height:4px;border-radius:50%;background:var(--text-muted);flex:0 0 auto}
+
+/* ============ ALLY CREDENTIAL ============ */
+.ally-credential{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-4)}
+.ally-credential-mark{width:64px;height:64px;border-radius:50%;border:1px solid var(--border-1);background:var(--surface-2);display:flex;align-items:center;justify-content:center;padding:var(--space-3)}
+.ally-credential-mark img{width:100%;height:100%;object-fit:contain}
+.ally-credential-caption{font-family:var(--font-mono);font-size:var(--fs-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)}
+
+/* ============ PARTNER CIRCLES ============ */
+.partner-circles{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-7)}
+.partner-circle{width:160px;height:160px;border-radius:50%;border:1px solid var(--border-1);background:var(--surface-2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-3);text-align:center;padding:var(--space-5);transition:border-color var(--dur-2) var(--ease-out),transform var(--dur-2) var(--ease-out)}
+.partner-circle:hover{border-color:var(--border-accent);transform:translateY(-2px)}
+.partner-circle img{max-width:64px;max-height:32px;width:auto;height:auto;filter:brightness(0) invert(1)}
+.partner-circle img.logo-color{filter:none}
+.partner-circle .partner-tier{font-family:var(--font-mono);font-size:var(--fs-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)}
+@media (max-width:640px){.partner-circle{width:130px;height:130px}}
+
 /* ============ FOLD TEXT (títulos display, entrada al hacer scroll) ============ */
 .fold-text-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .fold-text-visual{display:inline}
