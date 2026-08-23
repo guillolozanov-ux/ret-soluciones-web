@@ -54,11 +54,7 @@
     <div class="ret-wave__content">
       <div class="wrap" style="padding:var(--space-13) 0 var(--space-10);text-align:center">
         <div class="spaced-title sm">Alianzas estratégicas</div>
-        <h1 class="ally-hero-title" style="margin-top:var(--space-6)">
-          <span class="h-display xl">Nuestros</span>
-          <span class="ally-orb" id="aliados-hero-orb"><canvas class="ret-orb__canvas"></canvas></span>
-          <span class="h-display xl">Aliados</span>
-        </h1>
+        <h1 class="h-display xl" style="margin-top:var(--space-6)">Nuestros Aliados</h1>
         <p style="margin:var(--space-6) auto 0;max-width:560px;font-size:var(--fs-md);line-height:var(--lh-body);color:var(--text-2)">
           Colaboramos con los principales desarrolladores y fabricantes del sector para llevarle tecnología de punta con respaldo local. Marcas escritas en tipografía RET: no reconstruimos logotipos de fabricante sin autorización.
         </p>
@@ -232,8 +228,6 @@
 <script>
   var __aliadosWave = document.getElementById('aliados-hero-wave');
   if (__aliadosWave) mountDotWave(__aliadosWave, { DENSITY: 0.4, DOT_SCALE: 0.22, INTENSITY: 0.16 });
-  var __aliadosHeroOrb = document.getElementById('aliados-hero-orb');
-  if (__aliadosHeroOrb) mountNimbusOrb(__aliadosHeroOrb, { COUNT: 4000, ORB_SCALE: 0.78 });
   var __aliadosCtaOrb = document.getElementById('aliados-cta-orb');
   if (__aliadosCtaOrb) mountNimbusOrb(__aliadosCtaOrb);
 </script>

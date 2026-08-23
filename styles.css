@@ -558,9 +558,7 @@ main{padding-top:var(--header-h)}
 @media (max-width:900px){.feature-split{grid-template-columns:1fr}.feature-split-nav{flex-direction:row;flex-wrap:wrap;position:static}.feature-split-item{flex:1 1 auto;justify-content:center;text-align:center}}
 @media (max-width:640px){.feature-split-nav{flex-direction:column}.feature-split-item{justify-content:flex-start;text-align:left}}
 
-/* ============ ALLY HERO (título partido + orbe central) ============ */
-.ally-hero-title{display:flex;align-items:center;justify-content:center;gap:var(--space-7);flex-wrap:wrap;margin:0;text-align:center}
-.ally-orb{position:relative;width:clamp(96px,12vw,180px);aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:#000;flex:0 0 auto;box-shadow:0 0 40px rgba(16,170,190,.28)}
+/* ============ ALLY HERO ============ */
 .ally-hero-stats{display:flex;gap:var(--space-9);justify-content:center;margin-top:var(--space-9)}
 .ally-hero-stats .stat{text-align:center}
 @media (max-width:640px){.ally-hero-stats{gap:var(--space-7)}}
