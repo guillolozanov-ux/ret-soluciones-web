@@ -578,8 +578,8 @@ main{padding-top:var(--header-h)}
 
 /* ============ PARTNER BADGES ============ */
 .partner-badges{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--space-9)}
-.partner-badges img{height:64px;width:auto}
-@media (max-width:640px){.partner-badges img{height:48px}}
+.partner-badges img{width:180px;height:74px;object-fit:contain}
+@media (max-width:640px){.partner-badges img{width:130px;height:54px}}
 
 /* ============ FOLD TEXT (títulos display, entrada al hacer scroll) ============ */
 .fold-text-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
