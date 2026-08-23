@@ -101,8 +101,46 @@
     </p>
   </section>
 
+  <div class="ret-dc" id="conocenos-dc-hologram" style="border-top:1px solid var(--border-1);border-bottom:1px solid var(--border-1)">
+    <canvas class="ret-dc__canvas"></canvas>
+    <div class="ret-dc__content">
+      <div class="wrap service-showcase-head">
+        <div class="eyebrow" style="justify-content:center"><span class="idx">02.</span><span>Nuestros servicios</span></div>
+        <h2 class="h-display" style="margin-top:var(--space-5)">Cuatro frentes, un solo equipo</h2>
+        <p>Cada servicio corre sobre la misma infraestructura monitoreada, con analistas propios respondiendo desde Barranquilla.</p>
+      </div>
+      <div class="wrap service-showcase-grid">
+        <div class="service-showcase-col">
+          <div class="service-showcase-item">
+            <h3><span class="icon-accent"><svg data-lucide="radar" class="icon-28"></svg></span>XDR+ / CyberSOC</h3>
+            <p>Detección y respuesta gestionada sobre endpoints, red y correo.</p>
+            <ul><li>Analistas propios 24/7</li><li>MTTD 6 min</li><li>MTTR 11 min</li></ul>
+          </div>
+          <div class="service-showcase-item">
+            <h3><span class="icon-accent"><svg data-lucide="shield-check" class="icon-28"></svg></span>Ciberseguridad</h3>
+            <p>Gestión de vulnerabilidades y análisis de malware, más allá del XDR+.</p>
+            <ul><li>Hacking ético</li><li>Test de penetración</li><li>Simulacros de ciberataque</li></ul>
+          </div>
+        </div>
+        <div></div>
+        <div class="service-showcase-col col-right">
+          <div class="service-showcase-item">
+            <h3><span class="icon-accent"><svg data-lucide="database-backup" class="icon-28"></svg></span>IaaS / Backups</h3>
+            <p>Infraestructura y respaldo administrados con recuperación probada.</p>
+            <ul><li>RPO 15 min</li><li>RTO 4 h</li><li>Pruebas trimestrales</li></ul>
+          </div>
+          <div class="service-showcase-item">
+            <h3><span class="icon-accent"><svg data-lucide="file-lock-2" class="icon-28"></svg></span>DLP</h3>
+            <p>Clasificación y control de la información que sale de la empresa.</p>
+            <ul><li>Correo</li><li>USB</li><li>Nube</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section class="wrap" style="padding-bottom:var(--section-y)">
-    <div class="eyebrow"><span class="idx">02.</span><span>¿Por qué escogernos?</span></div>
+    <div class="eyebrow"><span class="idx">03.</span><span>¿Por qué escogernos?</span></div>
     <div class="feature-split" style="margin-top:var(--space-8)">
       <div class="feature-split-nav">
         <div class="feature-split-item"><span class="icon-accent"><svg data-lucide="graduation-cap" class="icon-20"></svg></span><span>Equipo</span></div>
@@ -228,11 +266,24 @@
 </script>
 <script src="assets/js/dot-wave.js"></script>
 <script src="assets/js/nimbus-orb.js"></script>
+<script src="assets/js/dc-hologram.js"></script>
 <script>
   var __conocenosWave = document.getElementById('conocenos-hero-wave');
   if (__conocenosWave) mountDotWave(__conocenosWave, { DENSITY: 0.4, DOT_SCALE: 0.22, INTENSITY: 0.16 });
   var __conocenosOrb = document.getElementById('conocenos-cta-orb');
   if (__conocenosOrb) mountNimbusOrb(__conocenosOrb);
+  var __conocenosDc = document.getElementById('conocenos-dc-hologram');
+  if (__conocenosDc) mountDcHologram(__conocenosDc, {
+    COLOR: [0.06, 0.78, 0.75],
+    CAM_D: 7.6,
+    FOV: 980,
+    SCENE_Y: 0.72,
+    RACKS: [
+      [0.00, 0.00, 0, 1.55, 2.60, 1.00],
+      [-1.15, 0.75, 26, 1.30, 2.25, 0.80],
+      [1.15, 0.75, -26, 1.30, 2.25, 0.80]
+    ]
+  });
 </script>
 <script src="assets/js/staggered-menu.js"></script>
 <script>
