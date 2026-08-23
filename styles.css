@@ -561,7 +561,7 @@ main{padding-top:var(--header-h)}
 /* ============ ALLY CREDENTIAL ============ */
 .ally-credential{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-4)}
 .ally-credential-avatars{display:flex}
-.ally-avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--surface-page);margin-left:-16px;background:var(--surface-2)}
+.ally-avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid var(--surface-page);margin-left:-22px;background:var(--surface-2)}
 .ally-avatar:first-child{margin-left:0}
 .ally-credential-caption{font-family:var(--font-mono);font-size:var(--fs-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)}
 
