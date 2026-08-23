@@ -103,6 +103,7 @@
 
   <div class="ret-dc" id="conocenos-dc-hologram" style="border-top:1px solid var(--border-1);border-bottom:1px solid var(--border-1)">
     <canvas class="ret-dc__canvas"></canvas>
+    <div class="ret-dc__fade" aria-hidden="true"></div>
     <div class="ret-dc__content">
       <div class="wrap service-showcase-head">
         <div class="eyebrow" style="justify-content:center"><span class="idx">02.</span><span>Nuestros servicios</span></div>
@@ -275,13 +276,13 @@
   var __conocenosDc = document.getElementById('conocenos-dc-hologram');
   if (__conocenosDc) mountDcHologram(__conocenosDc, {
     COLOR: [0.06, 0.78, 0.75],
-    CAM_D: 7.6,
+    CAM_D: 8.4,
     FOV: 980,
     SCENE_Y: 0.72,
     RACKS: [
-      [0.00, 0.00, 0, 1.55, 2.60, 1.00],
-      [-1.15, 0.75, 26, 1.30, 2.25, 0.80],
-      [1.15, 0.75, -26, 1.30, 2.25, 0.80]
+      [0.00, 0.00, 0, 1.55, 2.30, 1.00],
+      [-1.15, 0.75, 26, 1.30, 2.00, 0.80],
+      [1.15, 0.75, -26, 1.30, 2.00, 0.80]
     ]
   });
 </script>
