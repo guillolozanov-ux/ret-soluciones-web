@@ -580,9 +580,10 @@ main{padding-top:var(--header-h)}
 .ally-credential-caption{font-family:var(--font-mono);font-size:var(--fs-2xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)}
 
 /* ============ PARTNER BADGES ============ */
-.partner-badges{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--space-9)}
-.partner-badges img{display:block;height:72px;width:auto}
-@media (max-width:640px){.partner-badges img{height:52px}}
+.partner-badges{display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;gap:var(--space-9);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.partner-badges::-webkit-scrollbar{display:none}
+.partner-badges img{display:block;height:72px;width:auto;flex:0 0 auto}
+@media (max-width:640px){.partner-badges{justify-content:flex-start;gap:var(--space-6)}.partner-badges img{height:48px}}
 
 /* ============ SHINE SWEEP (destello periódico sobre badges/logos) ============ */
 .shine-badge{position:relative;display:inline-flex;overflow:hidden;line-height:0}
