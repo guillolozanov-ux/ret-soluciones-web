@@ -122,6 +122,8 @@ body{margin:0;background:var(--surface-page);color:var(--text-1);font-family:var
 img{max-width:100%;display:block}
 a{color:var(--text-link);text-decoration:none}
 a:hover{color:var(--text-link-hover)}
+.contact-link{color:inherit;transition:color var(--dur-1) var(--ease-out)}
+.contact-link:hover{color:var(--teal-300)}
 ::selection{background:rgba(16,170,190,.25)}
 button{font:inherit}
 
