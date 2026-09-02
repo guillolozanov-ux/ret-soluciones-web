@@ -401,6 +401,15 @@ main{padding-top:var(--header-h)}
 .sm-panel-item:hover .sm-panel-itemLabel{color:var(--sm-accent,var(--teal-600))}
 .sm-panel-list[data-numbering]{counter-reset:smItem}
 .sm-panel-list[data-numbering] .sm-panel-item::after{counter-increment:smItem;content:counter(smItem,decimal-leading-zero);position:absolute;top:1.1em;right:0;font-family:var(--font-mono);font-size:var(--fs-xs);color:var(--sm-accent,var(--teal-600));opacity:var(--sm-num-opacity,0)}
+.sm-panel-item--parent{width:100%;background:none;border:0;text-align:left;font:inherit;color:inherit;cursor:pointer;-webkit-appearance:none;appearance:none}
+.sm-panel-caret{display:inline-block;width:.34em;height:.34em;margin-left:.32em;vertical-align:.28em;border-right:.085em solid currentColor;border-bottom:.085em solid currentColor;color:var(--sm-accent,var(--teal-600));transform:rotate(45deg);transform-origin:50% 50%;transition:transform var(--dur-1) var(--ease-out)}
+.sm-panel-item--parent[aria-expanded='true'] .sm-panel-caret{transform:rotate(-135deg)}
+.sm-panel-sublist{list-style:none;margin:0;padding:0 0 var(--space-4);overflow:hidden;display:flex;flex-direction:column;gap:2px}
+.sm-panel-sublist[hidden]{display:none}
+.sm-panel-subitemWrap{line-height:1}
+.sm-panel-subitem{display:block;padding:var(--space-3) 0 var(--space-3) var(--space-5);text-decoration:none;font-family:var(--font-mono);font-size:var(--fs-sm);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--ink-500);border-left:1px solid var(--ink-100);transition:color var(--dur-1) var(--ease-out),border-color var(--dur-1) var(--ease-out)}
+.sm-panel-subitem:hover{color:var(--ink-950);border-left-color:var(--sm-accent,var(--teal-600))}
+.sm-panel-subitem.is-active{color:var(--sm-accent,var(--teal-600));border-left-color:var(--sm-accent,var(--teal-600))}
 .sm-socials{margin-top:auto;padding-top:var(--space-6);border-top:1px solid var(--ink-100);display:flex;flex-direction:column;gap:var(--space-4)}
 .sm-socials-title{margin:0;font-family:var(--font-mono);font-size:var(--fs-xs);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--weight-medium);color:var(--ink-500)}
 .sm-socials-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:row;gap:var(--space-6);flex-wrap:wrap}

@@ -73,22 +73,98 @@
     list.className = 'sm-panel-list';
     list.setAttribute('role', 'list');
     if (config.displayItemNumbering) list.setAttribute('data-numbering', 'true');
+    /* Página actual, para autoexpandir el grupo que la contiene y marcar el hijo activo. */
+    var currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+
+    var subGroups = [];
+    var subId = 0;
+
     (config.items || []).forEach(function (it, idx) {
       var li = document.createElement('li');
       li.className = 'sm-panel-itemWrap';
-      var a = document.createElement('a');
-      a.className = 'sm-panel-item';
-      a.href = it.link || '#';
-      if (it.ariaLabel) a.setAttribute('aria-label', it.ariaLabel);
-      a.setAttribute('data-index', idx + 1);
+      var kids = it.children && it.children.length ? it.children : null;
+
+      /* Un item con children se vuelve botón acordeón en vez de enlace: el panel
+         mobile no tiene hover, así que el submenú se abre por tap. */
+      var trigger = document.createElement(kids ? 'button' : 'a');
+      trigger.className = 'sm-panel-item';
+      if (kids) {
+        trigger.type = 'button';
+        trigger.classList.add('sm-panel-item--parent');
+      } else {
+        trigger.href = it.link || '#';
+      }
+      if (it.ariaLabel) trigger.setAttribute('aria-label', it.ariaLabel);
+      trigger.setAttribute('data-index', idx + 1);
+
       var label = document.createElement('span');
       label.className = 'sm-panel-itemLabel';
-      label.textContent = it.label;
-      a.appendChild(label);
-      li.appendChild(a);
+      label.appendChild(document.createTextNode(it.label));
+      if (kids) {
+        var caret = document.createElement('span');
+        caret.className = 'sm-panel-caret';
+        caret.setAttribute('aria-hidden', 'true');
+        label.appendChild(caret);
+      }
+      trigger.appendChild(label);
+      li.appendChild(trigger);
+
+      if (kids) {
+        li.classList.add('sm-panel-itemWrap--parent');
+        var sub = document.createElement('ul');
+        sub.className = 'sm-panel-sublist';
+        sub.id = 'sm-sub-' + (++subId);
+        sub.setAttribute('role', 'list');
+        var hasCurrent = false;
+        kids.forEach(function (kid) {
+          var kLi = document.createElement('li');
+          kLi.className = 'sm-panel-subitemWrap';
+          var kA = document.createElement('a');
+          kA.className = 'sm-panel-subitem';
+          kA.href = kid.link || '#';
+          if (kid.ariaLabel) kA.setAttribute('aria-label', kid.ariaLabel);
+          if ((kid.link || '').toLowerCase() === currentPage) {
+            kA.classList.add('is-active');
+            kA.setAttribute('aria-current', 'page');
+            hasCurrent = true;
+          }
+          kA.textContent = kid.label;
+          kLi.appendChild(kA);
+          sub.appendChild(kLi);
+        });
+        trigger.setAttribute('aria-controls', sub.id);
+        trigger.setAttribute('aria-expanded', hasCurrent ? 'true' : 'false');
+        if (hasCurrent) li.classList.add('is-expanded');
+        else sub.hidden = true;
+        li.appendChild(sub);
+        subGroups.push({ trigger: trigger, sub: sub, li: li });
+      }
+
       list.appendChild(li);
     });
     panelInner.appendChild(list);
+
+    /* Acordeón: alto animado con GSAP; `hidden` mantiene los enlaces fuera del
+       foco cuando está cerrado. */
+    subGroups.forEach(function (g) {
+      g.trigger.addEventListener('click', function () {
+        var expanded = g.trigger.getAttribute('aria-expanded') === 'true';
+        gsap.killTweensOf(g.sub);
+        if (expanded) {
+          gsap.to(g.sub, {
+            height: 0, opacity: 0, duration: 0.3, ease: 'power3.inOut',
+            onComplete: function () { g.sub.hidden = true; gsap.set(g.sub, { clearProps: 'height,opacity' }); }
+          });
+        } else {
+          g.sub.hidden = false;
+          gsap.set(g.sub, { height: 'auto', opacity: 1 });
+          gsap.from(g.sub, { height: 0, opacity: 0, duration: 0.38, ease: 'power3.out',
+            onComplete: function () { gsap.set(g.sub, { clearProps: 'height' }); } });
+        }
+        g.trigger.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        g.li.classList.toggle('is-expanded', !expanded);
+      });
+    });
 
     if (config.displaySocials && config.socialItems && config.socialItems.length) {
       var socials = document.createElement('div');
@@ -161,6 +237,11 @@
           tl.to(numberEls, { duration: 0.6, ease: 'power2.out', '--sm-num-opacity': 1, stagger: { each: 0.08, from: 'start' } }, itemsStart + 0.1);
         }
       }
+      var openSubs = Array.prototype.slice.call(panel.querySelectorAll('.sm-panel-sublist:not([hidden])'));
+      if (openSubs.length) {
+        gsap.set(openSubs, { opacity: 0 });
+        tl.to(openSubs, { opacity: 1, duration: 0.5, ease: 'power2.out' }, panelInsertTime + panelDuration * 0.35);
+      }
       if (socialTitle || socialLinks.length) {
         var socialsStart = panelInsertTime + panelDuration * 0.4;
         if (socialTitle) tl.to(socialTitle, { opacity: 1, duration: 0.5, ease: 'power2.out' }, socialsStart);
@@ -199,6 +280,8 @@
           var socialLinks = Array.prototype.slice.call(panel.querySelectorAll('.sm-socials-link'));
           if (socialTitle) gsap.set(socialTitle, { opacity: 0 });
           if (socialLinks.length) gsap.set(socialLinks, { y: 25, opacity: 0 });
+          var openSubs = Array.prototype.slice.call(panel.querySelectorAll('.sm-panel-sublist:not([hidden])'));
+          if (openSubs.length) gsap.set(openSubs, { opacity: 0 });
           busy = false;
         }
       });
