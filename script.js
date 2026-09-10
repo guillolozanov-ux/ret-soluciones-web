@@ -140,6 +140,11 @@
         logoTrack.appendChild(clone);
       }
       logoTrack.style.setProperty('--seq-width', period + 'px');
+      // Safari/iOS fija los valores del @keyframes al arrancar la animación (cuando
+      // --seq-width aún era 0) y no los recalcula: reiniciarla fuerza a leer el nuevo.
+      logoTrack.style.animationName = 'none';
+      void logoTrack.offsetWidth;
+      logoTrack.style.animationName = '';
       if (!reduceMotion) {
         var speedPxPerSec = 55;
         logoTrack.style.animationDuration = (period / speedPxPerSec) + 's';
