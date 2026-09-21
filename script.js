@@ -191,4 +191,49 @@
       });
     });
   }
+  // WhatsApp flotante: aparece al pasar el primer hero de la página y, la
+  // primera vez en la sesión, abre solo el saludo. Va debajo del banner de
+  // cookies y del menú móvil (z-index), así no tapa sus botones.
+  (function () {
+    var hero = document.querySelector('main > :first-child');
+    if (!hero || !('IntersectionObserver' in window)) return;
+    var href = 'https://wa.me/573337330444?text=' +
+      encodeURIComponent('Hola, quiero información sobre sus servicios.');
+    var wa = document.createElement('div');
+    wa.className = 'wa';
+    wa.innerHTML =
+      '<div class="wa-card" id="wa-card" role="dialog" aria-label="Chat de WhatsApp">' +
+        '<div class="wa-head">' +
+          '<span class="wa-avatar"><img src="assets/logo-ret-blanco.png" alt=""></span>' +
+          '<span><span class="wa-title">RET Soluciones</span><span class="wa-sub">Responde en horario laboral</span></span>' +
+          '<button type="button" class="wa-close" aria-label="Cerrar chat"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>' +
+        '</div>' +
+        '<div class="wa-body">' +
+          '<p class="wa-bubble">¡Hola! 👋 ¿Tiene preguntas sobre la seguridad o la infraestructura de su empresa? Escríbanos y le respondemos.</p>' +
+          '<a class="wa-cta" href="' + href + '" target="_blank" rel="noopener noreferrer">Iniciar chat</a>' +
+        '</div>' +
+      '</div>' +
+      '<button type="button" class="wa-fab" aria-label="Abrir chat de WhatsApp" aria-controls="wa-card" aria-expanded="false">' +
+        '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>' +
+      '</button>';
+    document.body.appendChild(wa);
+
+    var fab = wa.querySelector('.wa-fab');
+    var setOpen = function (open) {
+      wa.classList.toggle('is-open', open);
+      fab.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    fab.addEventListener('click', function () { setOpen(!wa.classList.contains('is-open')); });
+    wa.querySelector('.wa-close').addEventListener('click', function () { setOpen(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+
+    new IntersectionObserver(function (entries) {
+      var past = !entries[0].isIntersecting && entries[0].boundingClientRect.top < 0;
+      wa.classList.toggle('is-shown', past);
+      if (!past) { setOpen(false); return; }
+      var seen = false;
+      try { seen = sessionStorage.getItem('wa-greeted') === '1'; sessionStorage.setItem('wa-greeted', '1'); } catch (e) {}
+      if (!seen) setTimeout(function () { setOpen(true); }, 600);
+    }).observe(hero);
+  })();
 })();
