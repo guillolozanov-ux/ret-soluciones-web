@@ -1,0 +1,7 @@
+# Forzar HTTPS (la regla vivía en el .htaccess de WordPress, que se retiró).
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Sin listados de directorio.
+Options -Indexes
