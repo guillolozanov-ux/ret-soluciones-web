@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/retcom/public_html/
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp *.html $DEPLOYPATH
+    - /bin/cp styles.css script.js .htaccess $DEPLOYPATH
